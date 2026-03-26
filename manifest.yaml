@@ -1,0 +1,33 @@
+version: 0.1.0
+name: puffy-media-extractor
+label:
+  en_US: "Puffy Media Extractor"
+  zh_Hans: "Puffy 媒体提取器"
+description:
+  en_US: "Extract video, audio, and transcripts from YouTube, TikTok, Bilibili, X, and more via your local Puffy daemon."
+  zh_Hans: "通过本地 Puffy 守护进程，从 YouTube、抖音、B站、X 等平台提取视频、音频和文字稿。"
+icon: "icon.svg"
+author: "susu-pro"
+type: tool
+category: media-processing
+
+credentials_for_provider:
+  puffy_endpoint:
+    type: text-input
+    required: false
+    default: "http://127.0.0.1:41480"
+    label:
+      en_US: "Puffy Endpoint"
+      zh_Hans: "Puffy 端点"
+    help:
+      en_US: "The local Puffy daemon URL. Default: http://127.0.0.1:41480"
+      zh_Hans: "本地 Puffy 守护进程地址。默认: http://127.0.0.1:41480"
+
+tools:
+  - name: extract_media
+    label:
+      en_US: "Extract Media"
+      zh_Hans: "提取媒体"
+    description:
+      en_US: "Download and extract media assets (video + transcript) from a URL."
+      zh_Hans: "从链接下载并提取媒体资产（视频 + 文字稿）。"
